@@ -1,7 +1,7 @@
 package com.goit;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Scanner;
 
@@ -9,11 +9,11 @@ import static com.goit.CalculatorAddSubMultDiv.*;
 
 
 public class Runner {
-    CalculatorAddSubMultDiv calculatorAddSubMultDiv;
+    Calculator calculator;
 
 
     public static void main(String[] args) {
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("app-context.xml", "aop-context.xml");
         Runner runner = applicationContext.getBean("runner", Runner.class);
         runner.run();
     }
@@ -52,7 +52,7 @@ public class Runner {
             }
 
             if (!isValidOperation){
-                System.err.println("Enter valid type of operation +/-");
+                System.err.println("Enter valid type of operation +,-,/,*");
                 continue;
             }
 
@@ -62,11 +62,11 @@ public class Runner {
                 continue;
             }
 
-            System.out.println("="+ calculatorAddSubMultDiv.operate(Double.valueOf(operands[0]), Double.valueOf(operands[1]), operation));
+            System.out.println("="+ calculator.calculate(Double.valueOf(operands[0]), Double.valueOf(operands[1]), operation));
         }
     }
 
-    public void setCalculatorAddSubMultDiv(CalculatorAddSubMultDiv calculatorAddSubMultDiv) {
-        this.calculatorAddSubMultDiv = calculatorAddSubMultDiv;
+    public void setCalculator(Calculator calculator) {
+        this.calculator = calculator;
     }
 }

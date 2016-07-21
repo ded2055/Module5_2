@@ -1,0 +1,5 @@
+2016-07-21 22:06:50,092 INFO [main] c.g.LogAspect [LogAspect.java:46] com.goit.CalculatorAddSubMultDiv.calculate(5.0,6.0,+) execution time: 0 ms
+2016-07-21 22:06:54,491 INFO [main] c.g.LogAspect [LogAspect.java:46] com.goit.CalculatorAddSubMultDiv.calculate(21.0,8.0,/) execution time: 0 ms
+2016-07-21 22:06:57,471 INFO [main] c.g.LogAspect [LogAspect.java:46] com.goit.CalculatorAddSubMultDiv.calculate(6.0,7.0,+) execution time: 0 ms
+2016-07-21 22:07:03,633 INFO [main] c.g.LogAspect [LogAspect.java:46] com.goit.CalculatorAddSubMultDiv.calculate(45.0,6456.0,*) execution time: 0 ms
+2016-07-21 22:07:06,722 INFO [main] c.g.LogAspect [LogAspect.java:46] com.goit.CalculatorAddSubMultDiv.calculate(6556.0,-454.0,+) execution time: 0 ms

@@ -1,20 +1,17 @@
 package com.goit;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
-
-@Configuration
+//@Configuration
+//@EnableAspectJAutoProxy
 public class AppConfig {
 
-    @Bean
+//    @Bean
     public Runner runner(CalculatorAddSubMultDiv calculatorAddSubMultDiv) {
         Runner runner = new Runner();
-        runner.setCalculatorAddSubMultDiv(calculatorAddSubMultDiv);
+        runner.setCalculator(calculatorAddSubMultDiv);
         return runner;
     }
 
-    @Bean
+//    @Bean
     CalculatorAddSubMultDiv calculatorAdditionSubtraction(){
         return new CalculatorAddSubMultDiv();
     }
